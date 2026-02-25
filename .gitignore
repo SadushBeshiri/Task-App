@@ -1,0 +1,34 @@
+# --- OS / IDEs ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# --- Backend (Spring Boot: task-backend) ---
+task-backend/target/
+task-backend/.mvn/
+task-backend/mvnw
+task-backend/mvnw.cmd
+task-backend/HELP.md
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+
+# --- Frontend (React: task-frontend) ---
+task-frontend/node_modules/
+task-frontend/dist/
+task-frontend/dist-ssr/
+task-frontend/HELP.md
+*.local
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- Global Catch-all (Optional) ---
+**/target/
+**/node_modules/
+**/logs/
+*.log
