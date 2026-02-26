@@ -5,6 +5,7 @@ export function Tasks(){
     <div className="tasks">
       <p>All tasks</p>
       <Task></Task>
+      <Task></Task>
     </div>
   );
 }
