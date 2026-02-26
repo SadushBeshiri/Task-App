@@ -6,11 +6,14 @@ import com.SadushBeshiri.task_backend.domain.entity.TaskStatus;
 import com.SadushBeshiri.task_backend.exception.TaskNotFoundException;
 import com.SadushBeshiri.task_backend.service.TaskService;
 import com.SadushBeshiri.task_backend.domain.entity.Task;
+import com.SadushBeshiri.task_backend.repository.TaskRepository;
 import java.time.Instant;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TaskServiceImpl implements TaskService{
 
   

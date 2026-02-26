@@ -1,5 +1,7 @@
 package com.SadushBeshiri.task_backend.mapper.impl;
 
+import org.springframework.stereotype.Component;
+
 import com.SadushBeshiri.task_backend.domain.CreateTaskRequest;
 import com.SadushBeshiri.task_backend.domain.UpdateTaskRequest;
 import com.SadushBeshiri.task_backend.domain.dto.CreateTaskRequestDto;
@@ -8,6 +10,7 @@ import com.SadushBeshiri.task_backend.domain.dto.UpdateTaskRequestDto;
 import com.SadushBeshiri.task_backend.domain.entity.Task;
 import com.SadushBeshiri.task_backend.mapper.TaskMapper;
 
+@Component
 public class TaskMapperImpl implements TaskMapper{
 
   @Override
