@@ -18,6 +18,10 @@
   color: white;
 }
 
+.home-page .task-info .task-info-title{
+  padding-left: 20px;
+}
+
 .home-page .task-info .task-info-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
