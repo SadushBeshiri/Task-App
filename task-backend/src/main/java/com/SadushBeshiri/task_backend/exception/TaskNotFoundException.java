@@ -1,4 +1,4 @@
-package com.SadushBeshiri.task_backend.domain.exception;
+package com.SadushBeshiri.task_backend.exception;
 
 import java.util.UUID;
 

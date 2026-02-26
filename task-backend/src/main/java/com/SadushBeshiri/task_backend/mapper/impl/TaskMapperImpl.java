@@ -1,4 +1,4 @@
-package com.SadushBeshiri.task_backend.domain.exception.mapper.impl;
+package com.SadushBeshiri.task_backend.mapper.impl;
 
 import com.SadushBeshiri.task_backend.domain.CreateTaskRequest;
 import com.SadushBeshiri.task_backend.domain.UpdateTaskRequest;
@@ -6,7 +6,7 @@ import com.SadushBeshiri.task_backend.domain.dto.CreateTaskRequestDto;
 import com.SadushBeshiri.task_backend.domain.dto.TaskDto;
 import com.SadushBeshiri.task_backend.domain.dto.UpdateTaskRequestDto;
 import com.SadushBeshiri.task_backend.domain.entity.Task;
-import com.SadushBeshiri.task_backend.domain.exception.mapper.TaskMapper;
+import com.SadushBeshiri.task_backend.mapper.TaskMapper;
 
 public class TaskMapperImpl implements TaskMapper{
 

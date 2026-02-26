@@ -1,4 +1,4 @@
-package com.SadushBeshiri.task_backend.domain.exception.mapper;
+package com.SadushBeshiri.task_backend.mapper;
 
 import com.SadushBeshiri.task_backend.domain.CreateTaskRequest;
 import com.SadushBeshiri.task_backend.domain.UpdateTaskRequest;
