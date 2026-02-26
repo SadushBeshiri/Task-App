@@ -49,6 +49,7 @@
   background-color: rgb(45, 45, 45);
   border-radius: 10px;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 .home-page .tasks .tasks-title {
   padding-left: 20px;
@@ -70,7 +71,7 @@
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  opacity: 0.7;
+
 }
 .home-page .task .task-edit button:hover{
   transform: scale(1.2); 
@@ -90,7 +91,7 @@
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  opacity: 0.7;
+  
 }
 .home-page .task .task-delete button:hover{
   transform: scale(1.2); 
@@ -101,5 +102,38 @@
 .home-page .task .task-details .task-details-status {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 2fr
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.tasks-container{
+  flex: 1; /* Takes remaining space */
+  overflow-y: auto;
+}
+.tasks-create{
+  flex-shrink: 0; /* Prevents it from shrinking */
+  height: 180px;
+  background-color:black ;
+}
+.tasks-container::-webkit-scrollbar{
+  display: none;
+}
+.tasks-create button{
+  height: 40px;
+  width: 100px;
+  margin-top: 40px;
+  border-radius: 10px;
+  margin-left: 10px;
+
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.tasks-create button:hover{
+  transform: scale(1.2); 
+  opacity: 1;
+  filter: brightness(1.2); 
 }
 
