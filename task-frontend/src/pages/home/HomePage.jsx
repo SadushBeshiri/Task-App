@@ -1,13 +1,12 @@
 import { TaskInfo } from "./TaskInfo";
 import { Tasks } from "./Tasks";
-
 import './Homepage.css'
 
-export function HomePage(){
+export function HomePage({tasks}){
   return (
     <div className="home-page">
       <TaskInfo />
-      <Tasks />
+      <Tasks tasks={tasks}/>
     </div>
   );
 }

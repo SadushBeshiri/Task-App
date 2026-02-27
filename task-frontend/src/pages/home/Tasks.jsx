@@ -1,6 +1,6 @@
 import { Task } from "./Task";
 
-export function Tasks(){
+export function Tasks({tasks}){
   return (
     <div className="tasks">
       <div className="tasks-title">
@@ -8,9 +8,12 @@ export function Tasks(){
       </div>
 
     <div className="tasks-container">
-      <Task></Task>
-      <Task></Task>
-      
+    {tasks.map((task) => {
+
+      return (
+        <Task key={task.id} task={task}></Task>
+      );
+    })}
     </div>
 
     <div className="tasks-create">
