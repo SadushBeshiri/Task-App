@@ -1,8 +1,15 @@
 import binLogo from '../../assets/bin-logo.png'
 import editLogo from '../../assets/edit-logo.png'
+import axios from 'axios'
 
-export function Task({task}){
-  console.log(task);
+export function Task({task , loadTasksData}){
+
+  const deleteTask = async ()=> {
+    await axios.delete(`http://localhost:8080/api/v1/tasks/${task.id}`);
+    await loadTasksData();
+  }
+
+
   return (
     <div className="task">
       <div className="task-details">
@@ -25,7 +32,7 @@ export function Task({task}){
       </div>
 
       <div className="task-delete">
-        <button>
+        <button onClick={deleteTask}>
           <img src={binLogo}></img>
         </button>
       </div>

@@ -1,6 +1,6 @@
 import { Task } from "./Task";
 
-export function Tasks({tasks}){
+export function Tasks({tasks , loadTasksData}){
   return (
     <div className="tasks">
       <div className="tasks-title">
@@ -11,7 +11,7 @@ export function Tasks({tasks}){
     {tasks.map((task) => {
 
       return (
-        <Task key={task.id} task={task}></Task>
+        <Task key={task.id} task={task} loadTasksData={loadTasksData}></Task>
       );
     })}
     </div>
