@@ -1,0 +1,3 @@
+task-frontend/** linguist-detectable=true
+task-frontend/** linguist-vendored=false
+task-frontend/** linguist-documentation=false
