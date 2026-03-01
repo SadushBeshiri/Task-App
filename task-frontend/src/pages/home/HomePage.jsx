@@ -5,7 +5,7 @@ import './Homepage.css'
 export function HomePage({tasks,loadTasksData}){
   return (
     <div className="home-page">
-      <TaskInfo />
+      <TaskInfo tasks={tasks}/>
       <Tasks tasks={tasks} loadTasksData={loadTasksData}/>
     </div>
   );

@@ -2,8 +2,12 @@ import blueCalendarLogo from '../../assets/blue-calendar-logo.png'
 import darkblueCalendarLogo from '../../assets/dark-blue-calendar-logo.png'
 import checkmarkLogo from '../../assets/checkmark-logo.png'
 import inboxLogo from '../../assets/inbox-logo.png'
+import { findCompletedTasksNr } from '../../utils/findCompletedTasksNr';
+import { findTodayTasksNr } from '../../utils/findTodayTasksNr';
 
-export function TaskInfo (){
+
+export function TaskInfo ({tasks}){
+
   return (
     <div className="task-info">
       <div className="task-info-title">
@@ -12,22 +16,22 @@ export function TaskInfo (){
       <div className="task-info-container">
         <div className="task-info-container-today">
           <img src={blueCalendarLogo}></img>
-          <p>0</p>
+          <p>{findTodayTasksNr(tasks)}</p>
           <p>Today</p>
         </div>
         <div className="task-info-scheduled">
           <img src={darkblueCalendarLogo}></img>
-          <p>0</p>
+          <p>{tasks.length - findTodayTasksNr(tasks)}</p>
           <p>Scheduled</p>
         </div>
         <div className="task-info-container-all">
           <img src={inboxLogo}></img>
-          <p>0</p>
+          <p>{tasks.length}</p>
           <p>All</p>
         </div>
         <div className="task-info-container-completed">
           <img src={checkmarkLogo}></img>
-          <p>0</p>
+          <p>{findCompletedTasksNr(tasks)}</p>
           <p>Completed</p>
         </div>
       </div>
