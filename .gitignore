@@ -7,10 +7,6 @@
 
 # --- Backend (Spring Boot: task-backend) ---
 task-backend/target/
-task-backend/.mvn/
-task-backend/mvnw
-task-backend/mvnw.cmd
-task-backend/HELP.md
 .apt_generated
 .classpath
 .factorypath
