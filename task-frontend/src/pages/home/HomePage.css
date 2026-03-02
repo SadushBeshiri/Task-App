@@ -101,7 +101,7 @@
 
 .home-page .task .task-details .task-details-status {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 2fr
+  grid-template-columns: 1fr 1fr 2fr
 }
 
 .tasks {
@@ -136,4 +136,30 @@
   opacity: 1;
   filter: brightness(1.2); 
 }
+
+.create-task-forum > *{
+  margin: 0;
+  padding: 0;
+}
+textarea{
+  height: 100px;
+  resize: none;
+}
+.date-priority{
+  display: grid;
+  grid-template-columns: 1fr 1fr 
+
+}
+dialog{
+  width: 500px; /* Fixed width */
+  max-width: 90vw; /* Ensures it doesn't overflow small screens */
+  border: none; /* Optional: cleans up default border */
+  border-radius: 8px;
+}
+.create-task-buttons{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr ;
+}
+
+
 

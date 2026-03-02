@@ -1,6 +1,14 @@
+import { useState } from "react";
 import { Task } from "./Task";
+import { CreateTask } from "./CreateTask";
 
 export function Tasks({tasks , loadTasksData}){
+
+  const[isOpen , setIsOpen] = useState(false);
+  const closeCreateTask = ()=> {
+    setIsOpen(false);
+  }
+
   return (
     <div className="tasks">
       <div className="tasks-title">
@@ -17,10 +25,14 @@ export function Tasks({tasks , loadTasksData}){
     </div>
 
     <div className="tasks-create">
-      <button>Create Task</button>
+      <button onClick={() => {
+        setIsOpen(true);
+      }}>
+        Create Task
+      </button>
     </div>
 
-      
+    <CreateTask isOpen={isOpen} onClose={closeCreateTask} loadTasksData={loadTasksData}>Content</CreateTask>
 
     </div>
   );
