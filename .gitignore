@@ -28,3 +28,6 @@ pnpm-debug.log*
 **/node_modules/
 **/logs/
 *.log
+
+# Local environment variables
+.env
