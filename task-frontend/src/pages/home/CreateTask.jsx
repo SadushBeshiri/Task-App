@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 export function CreateTask({ isOpen, onClose, loadTasksData }) {
   const ref = useRef(null);
@@ -18,6 +19,8 @@ export function CreateTask({ isOpen, onClose, loadTasksData }) {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [priority, setPriorit] = useState("HIGH");
+  const [errorMessage, setErrorMessage] = useState("");
+  
 
   const handleSubmit = async () => {
 
@@ -28,17 +31,15 @@ export function CreateTask({ isOpen, onClose, loadTasksData }) {
       description,
       dueDate: date
     });
+
+    toast.success("Task added!");
   } catch (error) {
-    // 1. Check if the server actually sent a response
     if (error.response) {
-      // 2. Access the data field which contains your ErrorDto
-      // Based on your Java code, the message is likely in error.response.data.message
+      toast.error(error.response?.data?.error);
+      setErrorMessage(error.response.data.erro);
       console.log("Backend Error Message:", error.response.data.error);
-      
-      // To see the full object your backend sent:
       console.log("Full Error Object:", error.response.data);
     } else {
-      // Handles network errors (server down, CORS issues, etc.)
       console.log("Error:", error.message);
     }
   }

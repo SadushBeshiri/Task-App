@@ -34,6 +34,6 @@ public record CreateTaskRequestDto(
             "Due date must be in the future";
 
     private static final String ERROR_MESSAGE_PRIORITY =
-            "Task must be provided";
+            "Task priority must be provided";
   
 }
