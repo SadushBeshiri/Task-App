@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from 'react-toastify';
 
-export function CreateTask({ isOpen, onClose, loadTasksData }) {
+export function CreateTask({ isOpen, onClose, loadTasksData}) {
   const ref = useRef(null);
   useEffect(() => {
     const createTask = ref.current;
@@ -15,12 +15,12 @@ export function CreateTask({ isOpen, onClose, loadTasksData }) {
     }
   }, [isOpen]);
 
+  const today = new Date().toISOString().split('T')[0];
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(today);
   const [priority, setPriorit] = useState("HIGH");
-  const [errorMessage, setErrorMessage] = useState("");
-  
 
   const handleSubmit = async () => {
 
@@ -36,12 +36,7 @@ export function CreateTask({ isOpen, onClose, loadTasksData }) {
   } catch (error) {
     if (error.response) {
       toast.error(error.response?.data?.error);
-      setErrorMessage(error.response.data.erro);
-      console.log("Backend Error Message:", error.response.data.error);
-      console.log("Full Error Object:", error.response.data);
-    } else {
-      console.log("Error:", error.message);
-    }
+    } 
   }
 };
 
@@ -52,7 +47,7 @@ export function CreateTask({ isOpen, onClose, loadTasksData }) {
     setTitle("");
     setDescription("");
     setPriorit("HIGH");
-    setDate("");
+    setDate(today);
 
     onClose();
   }

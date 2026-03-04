@@ -1,11 +1,20 @@
 import binLogo from '../../assets/bin-logo.png'
 import editLogo from '../../assets/edit-logo.png'
 import axios from 'axios'
+import { UpdateTask } from './UpdateTask'
+import { useState } from 'react'
+import { toast } from 'react-toastify';
 
 export function Task({task , loadTasksData}){
 
+  const[isOpen , setIsOpen] = useState(false);
+    const closeCreateTask = ()=> {
+      setIsOpen(false);
+    }
+
   const deleteTask = async ()=> {
     await axios.delete(`http://localhost:8080/api/v1/tasks/${task.id}`);
+    toast.success("Task deleted!");
     await loadTasksData();
   }
 
@@ -26,7 +35,9 @@ export function Task({task , loadTasksData}){
       </div>
 
       <div className="task-edit">
-        <button>
+        <button onClick={() => {
+          setIsOpen(true);
+        }}>
           <img src={editLogo}></img>
         </button>
       </div>
@@ -36,6 +47,8 @@ export function Task({task , loadTasksData}){
           <img src={binLogo}></img>
         </button>
       </div>
+
+      <UpdateTask isOpen={isOpen} onClose={closeCreateTask} loadTasksData={loadTasksData} task={task}>Content</UpdateTask>
       
 
     </div>
