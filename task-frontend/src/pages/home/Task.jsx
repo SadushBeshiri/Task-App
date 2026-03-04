@@ -7,6 +7,8 @@ import { toast } from 'react-toastify';
 
 export function Task({task , loadTasksData}){
 
+    const statusClass = task.status === "COMPLETE" ? "task-completed" : "task-open";
+
   const[isOpen , setIsOpen] = useState(false);
     const closeCreateTask = ()=> {
       setIsOpen(false);
@@ -20,6 +22,7 @@ export function Task({task , loadTasksData}){
 
 
   return (
+    <div className={statusClass}>
     <div className="task">
       <div className="task-details">
         <div className="task-details-text">
@@ -51,6 +54,7 @@ export function Task({task , loadTasksData}){
       <UpdateTask isOpen={isOpen} onClose={closeCreateTask} loadTasksData={loadTasksData} task={task}>Content</UpdateTask>
       
 
+    </div>
     </div>
   );
 }
