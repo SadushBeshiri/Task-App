@@ -49,20 +49,20 @@ This project uses environment variables to keep credentials secure.
    DB_USERNAME=your_username
    DB_PASSWORD=your_password
 
-1. Backend Setup (Spring Boot)
-  Open your terminal and navigate to the backend folder: cd task-backend
-  Build the project and run the application using Maven: .\mvnw spring-boot:run
-  The server will start and be available at http://localhost:8080.
+### 2. Backend Setup (Spring Boot)
+1. Open your terminal and navigate to the backend folder: cd task-backend
+2. Build the project and run the application using Maven: .\mvnw spring-boot:run
+3. The server will start and be available at http://localhost:8080.
 
-2. Frontend Setup (React)
-  Open a new terminal window and navigate to the frontend folder: cd task-frontend
-  Install all necessary dependencies: npm install
-  Start the React development server: npm run dev
-  View the app at http://localhost:5173/
+### 3. Frontend Setup (React)
+1. Open a new terminal window and navigate to the frontend folder: cd task-frontend
+2. Install all necessary dependencies: npm install
+3. Start the React development server: npm run dev
+4. View the app at http://localhost:5173/
 
-📡 API Reference
-Method	Endpoint	          Description
-GET	    /api/v1/tasks	      Retrieve all tasks
-POST	  /api/v1/tasks	      Create a new task
-PUT	    /api/v1/tasks/{id}	Update task details/status
-DELETE	/api/v1/tasks/{id}	Remove a task permanently
+### 📡 API Reference
+1. Method	Endpoint	          Description
+2. GET	    /api/v1/tasks	      Retrieve all tasks
+3. POST	  /api/v1/tasks	      Create a new task
+4. PUT	    /api/v1/tasks/{id}	Update task details/status
+5. DELETE	/api/v1/tasks/{id}	Remove a task permanently
