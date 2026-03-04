@@ -92,7 +92,7 @@ export function UpdateTask({ isOpen, onClose, loadTasksData, task}) {
             type="date"
             value={date}
             onChange={(e) => { setDate(e.target.value) }}
-            style={{ marginRight: "10px" }}>
+            style={{width:"91%"}}>
           </input>
           <select
             name="prioriy"
@@ -116,11 +116,11 @@ export function UpdateTask({ isOpen, onClose, loadTasksData, task}) {
             <option value="COMPLETE">Complete</option>
           </select>
           
-        </div><br/>
+        </div><br/><br/>
 
         <div className="create-task-buttons">
           <button onClick={closeCreateTask}
-            style={{ marginRight: "10px" }}
+            style={{width:"98%"}}
           >Update task</button>
           <button onClick={onClose}>Cancel</button>
         </div>

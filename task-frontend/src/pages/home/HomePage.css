@@ -148,8 +148,7 @@ textarea{
 }
 .date-priority{
   display: grid;
-  grid-template-columns: 1fr 1fr 
-
+  grid-template-columns: 1fr 1fr;
 }
 dialog{
   width: 500px; /* Fixed width */
@@ -173,3 +172,57 @@ dialog{
   color: black;
 }
 
+dialog {
+  background-color: #1a1a1a; /* Matches your sidebar card color */
+  color: #ffffff;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Style the backdrop (overlay) to dim the background */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+dialog input, 
+dialog textarea, 
+dialog select {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Specific styling for the buttons at the bottom */
+.dialog-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+dialog button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Primary "Create" button */
+dialog button[type="submit"] {
+  background-color: #3b82f6; /* A standard blue primary color */
+  color: white;
+}
+
+/* Secondary "Cancel" button */
+dialog button.cancel {
+  background-color: transparent;
+  color: #888;
+  border: 1px solid #444;
+}

@@ -90,12 +90,14 @@ export function CreateTask({ isOpen, onClose, loadTasksData}) {
             type="date"
             value={date}
             onChange={(e) => { setDate(e.target.value) }}
-            style={{ marginRight: "10px" }}>
+            style={{width:"91%"}}
+          >
           </input>
           <select
             name="prioriy"
             value={priority}
             onChange={(e) => { setPriorit(e.target.value) }}
+            
           >
             <option value="HIGH">High</option>
             <option value="MEDIUM">Medium</option>
@@ -105,7 +107,8 @@ export function CreateTask({ isOpen, onClose, loadTasksData}) {
 
         <div className="create-task-buttons">
           <button onClick={closeCreateTask}
-            style={{ marginRight: "10px" }}
+          style={{width:"98%"}}
+            
           >Create task</button>
           <button onClick={onClose}>Cancel</button>
         </div>
