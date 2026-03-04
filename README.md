@@ -21,6 +21,8 @@ A professional Task Management application built with a **Spring Boot** REST API
 | :--- |
 | ![Completed View](./screenshots/completed-task.png) |
 
+![App Demo](./screenshots/demo.gif)
+
 ## 🛠️ Tech Stack
 **Frontend:** 
 - React.js (Hooks, Functional Components)
