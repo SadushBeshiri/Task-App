@@ -30,4 +30,4 @@ pnpm-debug.log*
 *.log
 
 # Local environment variables
-.env
+task-backend/.env
