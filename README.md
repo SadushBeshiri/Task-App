@@ -1,4 +1,4 @@
-# 📝 Full-Stack Task Manager
+# Full-Stack Task Manager
 
 A professional Task Management application built with a **Spring Boot** REST API and a **React** frontend. This project features a dynamic UI that reacts to task status changes with real-time styling updates.
 
@@ -10,7 +10,7 @@ A professional Task Management application built with a **Spring Boot** REST API
 - **Responsive Modals**: Uses native HTML5 `<dialog>` with React `useRef` for a smooth editing experience.
 - **Real-time Notifications**: Integrated `react-toastify` for success and error alerts.
 
-## 📸 Screenshots
+## Screenshots
 
 
 | Dashboard (Open Tasks) | Task Update Modal |
@@ -28,18 +28,18 @@ A professional Task Management application built with a **Spring Boot** REST API
 - React.js (Hooks, Functional Components)
 - Axios (HTTP Client)
 - React-Toastify
-- CSS3 (Transition animations & Conditional styling)
+- CSS (Transition animations & Conditional styling)
 
 **Backend:**
-- Java 17+
-- Spring Boot 3.x
+- Java 
+- Spring Boot
 - Spring Data JPA
 - MySQL Database
 - Maven
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### 1. Database Configuration
 This project uses environment variables to keep credentials secure.
@@ -62,7 +62,7 @@ This project uses environment variables to keep credentials secure.
 3. Start the React development server: npm run dev
 4. View the app at http://localhost:5173/
 
-### 📡 API Reference
+###  API Reference
 1. Method	Endpoint	          Description
 2. GET	    /api/v1/tasks	      Retrieve all tasks
 3. POST	  /api/v1/tasks	      Create a new task
